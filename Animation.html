@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: #eee;
+        }
+        .a{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            line-height: 300px;
+            margin: -150px;
+            background: white;
+            color: #03446A;
+            text-align: center;
+            font-size: 40px;
+            box-shadow: 0 0 15 rgba(0,0,0,0,1);
+            animation: sample;
+            animation-duration: 2s;
+            animation-delay: 2s;
+            animation-timing-function:ease;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+         @keyframes sample{
+        0%{
+      background:yellow;
+        }
+      50%{
+        background:green;
+      }
+      100%{
+       border-radius:50%;
+       background-color: blue;
+       color: white;
+      }
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+  Ritik Raghuwanshi
+    </div>
+</body>
+</html>

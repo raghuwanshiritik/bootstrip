@@ -1,0 +1,13 @@
+.carousel-caption{
+    color: #fff;
+    position: absolute;
+    top: 27%;
+    left: 153px;
+  }
+  .h2{
+    font-size: 70px;
+     border-bottom-style: ridge;
+    font-weight: bold;
+    border-bottom-color: #82c434;
+    text-transform: uppercase;
+  }

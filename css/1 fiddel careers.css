@@ -1,0 +1,139 @@
+.mt-4{
+    margin-top: 1.5rem!important;
+    }
+    .row{
+        display: flex;
+    flex-wrap: wrap;
+    margin-right: 14px;
+    margin-left: -15px;
+    }
+    .m1-1 {
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-family:'pargue';
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 40px;
+}
+.banner-content {
+   font-family:  'Montserrat',sans-serif;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    margin-top:20px;
+}
+.car_step{
+    padding-right: 65px;
+}
+@media (min-width: 768px){
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+}
+.m1-2{
+    padding-top: 20px;
+    font-family:'pargue';
+    font-size: 25px;
+    font-weight: bold;
+}
+.mainfooter{
+background: #020306f0;
+/* padding: 50px; */
+color: #fff;
+margin-top:20px;
+}
+.s{
+font-family: 'prague';
+font-size:2rem;
+line-height: 50px;
+letter-spacing:3px;
+color:#fff;
+margin-top: 28px;
+}
+.r1{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 15px;
+  height: 70px;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 0rem;
+}
+.navbar{
+  background: #00000082;
+}
+.navbar-nav li
+{
+padding: 0 10px;
+}
+.navbar-nav li a 
+{
+color:whitesmoke;
+font-weight:600px;
+font-size:20px;
+}
+.weblogo{
+ width: 65px;
+}
+.moblogo{
+ display: none;
+}
+@media(max-width:768px){
+.moblogo{
+ display:block;
+}
+.weblogo{
+ display:none;
+}
+.navbar{
+ background:#fcb21c!important;
+}
+}
+
+
+
+.mob-banner {
+display: none;
+}  
+.web-banner{
+  display: block;
+ }
+.contactline-mob{
+display:none;
+
+}
+.contactline-web {
+position:absolute;
+color:#fff;
+text-align: center;
+left: 0%; 
+right: 0;   
+top:40%;
+letter-spacing: 4px;
+text-transform: uppercase;
+font-size:100px;
+}
+
+@media(max-width:900px){
+  .web-banner{
+    display: none;
+  }
+.mob-banner{
+  display: block;
+}
+.contactline-mob{
+display:block;
+font-size:50px;
+ left: 0%; 
+right: 0;  
+top:10%;
+letter-spacing:2px;
+position: absolute; 
+color:#fff;
+
+}
+.contactline-web{
+display:none;
+}
+}

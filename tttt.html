@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel=" stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+       <style>
+       body{
+         padding: 0;
+         margin: 0;
+       }
+      /* a, a:hover{
+         text-decoration: none;
+       }
+       mt-20px{
+         margin-top: 20px;
+       } 
+        .border{
+         border-right:1px solid rgb(255 255 255 /0.4);
+       }  */
+        .btn-green{
+         display:inline-block;  
+         text-transform: capitalize;
+         font-size: 16px;
+         font-weight:#fff;
+         padding:10px 30px;
+         border-radius: 2px;
+         /* position:relative; */
+         border: 1px solid #01ca8b;
+         box-shadow:0 0 0 4em #01ca8b inset;
+          transition:all 350ms ease;
+       } 
+       .btn-green i{
+         margin-right:6px;
+       }
+       .btn-green:hover{
+         box-shadow:0 0 0#01ca8b inset;
+         background:#fff;
+         color: #01ca8b;
+       }
+        .btn-transparent{
+         border:1px solid #fff;
+       } 
+       header{
+         position:absolute;
+         top:0px;
+         left:0px;
+         z-index: 1;
+         width: 100%;
+         border-bottom:1px solid #fff;
+         background:#000;
+       }
+       .header-activ{
+         position: fixed;
+         background: #000;
+         /* z-index: 1; */
+         top:0;
+         /* animation-name: example; */
+         animation-duration:0.8s;
+       }
+       @keyframes example{
+         from{top:-200px;}
+         to{top:0}
+       }
+       .logo{
+         display:inline-block;
+         padding-right: 30px;
+       }
+       .menu{
+         display: inline-block;
+       }
+       .menu ul{
+        padding: 0px;
+        margin: 0px;
+       }
+       .menu ul li{
+         display: inline-block;
+         list-style-type: none;
+         margin: 0 20px;
+       }
+       .menu ul li{
+         color: #fff;
+         text-transform: capitalize;
+         font-weight: 900px;
+         font-size: 14px;
+         letter-spacing:1px;
+         position: relative;
+       }
+       .menu ul li a::before{
+         content: '';
+         position: absolute;
+         background: #fff;
+         width: 0;
+         height: 2px;
+         bottom:-5px;
+         left:0;
+         transition: 0.2s ease-in-out;
+       }
+       .menu ul li a:hover::before{
+        width: 100%;
+       }
+     .m1{
+         margin-top: 21px;
+     }
+     .m1 ul{
+         margin: 0;
+         padding: 0;
+ }
+ .m1 ul li{
+     list-style-type: none;
+     display: inline-block;
+     margin: 0 10px;
+ }
+ .m1 ul li a {
+ color: #fff;
+ background: rgb(255 255 255 /0.22);
+ width: 41px;
+ height: 41px;
+ border-radius: 50%;
+ display: inline-block;
+ position: relative;
+ }
+  .m1 ul li a i{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transition: 0.2s ease-in-out;
+     transform: translate(-50%,-50%);
+     display:inline-block;
+     font-size: 16px;   
+ }
+ .m1 ul li a:hover i{
+ color:#01ca8b
+ }
+       </style>
+ </head>
+ <body>
+ <header>
+      <div class="container-fluid">
+         <div class="row">
+         <div class="col-md-7 border">
+             <div class="logo border">
+                 <a href="index.html">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXgghdDHWrRL6F6HmgCaqa7OxgCoUcQkZKNExhuAHI5nNKLF9uW0_VFa6A_s7CtPkb83o&usqp=CAU" style="width:80px;height: 80px;"></img> 
+                 </a>
+             </div>
+              <!--mobile-view-->
+         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#a">
+           <span class="navbar-toggler-icon"></span>
+       </button>
+       <!--mobile-view-end-->
+             <div class="menu">
+                 <ul>
+                   <li><a href="" class="nav-link">HOME</a></li>
+                   <li><a href="" class="nav-link">About</a></li>
+                   <li><a href="" class="nav-link">Pages</a></li>
+                   <li><a href="" class="nav-link">Element</a></li>
+                   <li><a href="" class="nav-link">ContactUs</a></li>
+                 </ul>
+             </div>
+         </div>
+         <div class="col-md-2">
+             <div class="m1 text-center">
+                 <ul>
+                     <li>
+                         <a href="" class="nav-link">
+                             <i class="fa-solid fa-magnifying-glass"></i>
+                         </a>
+                     </li>
+                     <li>
+                         <a href="" class="nav-link">
+                             <i class="fa-solid fa-location-pin"></i> 
+                         </a>
+                     </li>
+                 </ul>
+             </div>
+             </div>
+             <div class="col-md-3">
+            <a href=""class="btn-green mt-20px">
+             <i class="fa-solid fa-calendar-week"></i>Make A Payment:
+           </a>
+             </div>        
+         </div><!--row-end-->
+     </div><!--container-fluid -->
+  <!--slider div start-->
+  <div class="carousel slide" data-bs-ride="carousel" id="a">
+ 
+   <div class="carousel-indicators">
+     <button type="button" data-bs-target="#a" data-bs-slide-to="0" class="active"></button>
+     <button type="button" data-bs-target="#a" data-bs-slide-to="1" ></button>
+     <button type="button" data-bs-target="#a" data-bs-slide-to="2" ></button>
+     <button type="button" data-bs-target="#a" data-bs-slide-to="3" ></button>
+     <button type="button" data-bs-target="#a" data-bs-slide-to="4" ></button>
+   </div>
+ 
+   <div class="carousel-inner">
+     <div class="carousel-item active" data-bs-interval="4000">
+ 
+       <img src="https://cdn-fphmm.nitrocdn.com/urGGtGrKymBwrLaFbrSoEYARRTGPprYA/assets/static/optimized/rev-aa832f0/en/wp-content/uploads/2021/11/en3.jpg" class="w-100" alt="...">
+       <div class="carousel-caption">
+         <h2 class="h2">PNINFOYS gwalior</h2>
+       </div><!--carousel-caption-->  
+     </div>
+     <div class="carousel-item" data-bs-interval="2000">
+       <img src="	https://www.smarteyeapps.com/demo/dental-lab-website-template/assets/images/s1.jpg" class="w-100" alt="...">
+       <div class="carousel-caption">
+       </div><!--carousel-caption-->  
+     </div>
+     <div class="carousel-item" data-bs-interval="2000">
+       <img src="https://cdn-fphmm.nitrocdn.com/urGGtGrKymBwrLaFbrSoEYARRTGPprYA/assets/static/optimized/rev-aa832f0/en/wp-content/uploads/2021/11/en2.jpg" class="w-100" alt="...">
+       <div class="carousel-caption">
+       </div><!--carousel-caption-->  
+     </div>
+     <div class="carousel-item" data-bs-interval="2000">
+ 
+       <img src="	https://www.smarteyeapps.com/demo/dental-lab-website-template/assets/images/s2.jpg" class="w-100" alt="...">
+       <div class="carousel-caption">
+         <h2 class="h2">PNINFOYS gwalior</h2>
+       </div><!--carousel-caption-->  
+     </div>
+     
+     <div class="carousel-item" data-bs-interval="2000">
+ 
+       <img src="https://cdn-fphmm.nitrocdn.com/urGGtGrKymBwrLaFbrSoEYARRTGPprYA/assets/static/optimized/rev-aa832f0/en/wp-content/uploads/2021/11/en5.jpg" class="w-100" alt="...">
+       <div class="carousel-caption">
+         <h2 class="h2">PNINFOYS gwalior</h2>
+       </div><!--carousel-caption-->  
+     </div>
+   </div><!--carousel-inner-->
+ 
+    <button class="carousel-control-prev" type="button" data-bs-target="#a" data-bs-slide="prev">
+     <span class="carousel-control-prev-icon"></span>
+   </button>
+   <button class="carousel-control-next" type="button" data-bs-target="#a" data-bs-slide="next">
+     <span class="carousel-control-next-icon"></span>
+   </button>
+ </div>
+ </header>
+ <div class="carousel-item" data-bs-interval="2000">
+  <img src="	https://www.smarteyeapps.com/demo/dental-lab-website-template/assets/images/s1.jpg" class="w-100 lo" alt="...">
+  <img src="	https://www.smarteyeapps.com/demo/dental-lab-website-template/assets/images/s1.jpg" class="w-100 ph" alt="...">
+<h1 class="contactline-web" style="font-family:prague;">WE CARE YOUR<br><span style="color:black">DENTAL</span><br>PROBLEM</h1>
+<h1 class="contactline-mob" style="font-family:prague;">WE CARE YOUR<br><b>DENTAL</b><br>PROBLEM</h1>
+  <div class="carousel-caption">
+  </div><!--carousel-caption-->  
+</div>
+ <!--slider div end-->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
+</body>
+</html>

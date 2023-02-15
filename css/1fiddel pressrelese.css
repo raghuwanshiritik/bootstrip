@@ -1,36 +1,33 @@
 .navbar{
-    background: #00000082;
- }
- .navbar-nav li
- {
-  padding: 0 10px;
- }
- .navbar-nav li a
- {
-  color: #fff!important;
-  font-weight:600px;
-  font-size:20px;
- }
- .b{
-   text-align: center;
- }
- .weblogo{
-   width: 65px;
- }
- .moblogo{
-   display: none;
- }
- @media(max-width:768px){
- .moblogo{
-   display:block;
- }
- .weblogo{
-   display:none;
- }
- .navbar{
-   background:#fcb21c!important;
- }
- }
+  background: #00000082;
+}
+.navbar-nav li
+{
+padding: 0 10px;
+}
+.navbar-nav li a 
+{
+color:whitesmoke;
+font-weight:600px;
+font-size:20px;
+}
+.weblogo{
+ width: 65px;
+}
+.moblogo{
+ display: none;
+}
+@media(max-width:768px){
+.moblogo{
+ display:block;
+}
+.weblogo{
+ display:none;
+}
+.navbar{
+ background:#fcb21c!important;
+}
+}
 
  .mob-banner {
   display: none;
@@ -79,12 +76,12 @@
    
 .img1{
     width: 24px;
-margin-left: 300px;
+/* margin-left: 300px; */
 margin-top: 40px;
 }
 
 .p1{ 
-    margin-left:340px;
+      padding-left: 100px; 
     margin-top:-24px;
 } 
 .p2{
@@ -122,10 +119,10 @@ border-bottom:2px solid #aba7a7;
 font: bold;
 }
 .img4{
-position: relative;
-width: 500px;
+
+width: 100%;
 margin-top:20px;
-padding-left: 140px; 
+/* padding-left: 140px;  */
 height: 350px;
 }
 .sm2{
@@ -212,3 +209,4 @@ color:green;
   margin-top: 40px;
   margin-bottom: 0rem;
 }
+     

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body align="center">
+
+        <form name="forms" onsubmit="return validate()">
+            Education:<select id="selection">
+    
+                <option value="Select Education">Select Education</option>
+                <option>MCA</option>
+                <option>CA</option>
+                <option>BCA</option>
+                <option>MA</option>
+                </select>
+    
+                <input type="submit" name="Submit">
+        </form>
+        <script type="text/javascript">
+            function validate()
+            {
+                var s1=document.getElementById('selection').value;
+    
+                if(s1=="Select Education"){
+                    alert("Plz select Education");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+</body>
+</html>

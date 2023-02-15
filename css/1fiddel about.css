@@ -77,20 +77,18 @@ display:none;
 }
  
 .m1-1{
-padding-top: 20px;
-text-transform: uppercase;
-font-family: 'prague';
-letter-spacing: 3px;
-font-size: 35px;
+  padding-top: 20px;
+   text-transform: uppercase;
+   font-family: 'prague';
+   letter-spacing: 2px;
+   font-size: 40px;
 }
 .p1{
-letter-spacing: 2px;
-word-spacing: 2px;
-font-size: 16px;
-margin-top: 15px;
-font-family:'montserrat',sans-serif;
-line-height: 25px;
-}
+  line-height: 40px;
+  letter-spacing: 1px;
+  color: black;
+  font-size: 16px;
+  } 
 .m1-2{
 padding-top: 20px;
 text-transform: uppercase;

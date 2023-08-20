@@ -263,3 +263,71 @@
 </div><!--container--end-->
 </body>
 </html>
+import React from 'react'
+import Sidebar from '../../components/Sidebar'
+import Link from 'next/link'
+const display = () => {
+    return (
+        <>
+            <div className='container mt-5 '>
+                <div className='row'>
+                    <div className='col-md-3'>
+                        <Sidebar />
+                    </div>
+                    <>
+                        <div className="col-md-9" style={{ marginTop: 100 }}>
+                            <button
+                                type="button"
+                                className="btn btn-primary pp"
+                                data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"
+                            >
+                                Add School
+                            </button>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th colSpan={5}>Schools</th>
+                                    </tr>
+                                    <tr>
+                                        {" "}
+                                        {/* <tr>table row */}
+                                        <th>#</th>
+                                        <th>School Name</th>
+                                        <th>Description</th>
+                                        <th>Email</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <img src="" width="50px;" />
+                                        </td>
+                                        <td>
+                                            <Link href={'/admin/view/blog'} className="btn btn-success">view
+                                            </Link>
+                                            <Link href={'/admin/edit/blog'}
+                                                className="btn btn-primary" >edit
+                                            </Link>
+                                            <Link href={'/admin/view/delete'} className="btn btn-danger ">Delete        
+                                            </Link>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        {/*row-end*/}
+                        {/*container-end*/}
+                    </>
+
+                </div>
+            </div>
+        </>
+    )
+}
+
+export default display
+
+//add school api

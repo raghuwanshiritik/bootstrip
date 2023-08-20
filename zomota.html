@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- CSS only -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <style>  
+    .navbar{
+        background: #5d0d0d01!important;
+   }
+   .navbar-nav li
+   {
+      padding: 0 10px;
+   }
+   .navbar-nav li a
+   {
+      color: #fff!important;
+      font-weight:600px;
+      font-size:20px;
+   }
+   .b{
+       text-align: center;
+   }
+   .weblogo{
+       width: 65px;
+   }
+   .moblogo{
+       display: none;
+   }
+   @media(max-width:768px){
+     .moblogo{
+       display:block;
+     }
+     .weblogo{
+       display:none;
+     }
+    }
+   .h{
+    margin-top: -600px;
+    /* text-align: center; */
+    color: #fff;
+    width: 300px;
+   }
+   .h1{
+    margin-top: -250px;
+    color:#fff;
+   font-family:maths;
+   }
+  
+</style>
+</head>
+<body>
+    <nav class="navbar bg-dark navbar-dark navbar-expand-md fixed-top">
+        <div class="container-fluid">
+            <a href="" class="navbar-brand">
+               <p>Get the app</p>
+            </a>
+            <!--mobile-view-->
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#a">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--mobile-view-end-->
+    
+    
+            <!--menu start-->
+            <div class="navbar-collapse collapse" id="a">
+                <ul class="navbar-nav ms-auto b">
+                    <li><a href="" class="nav-link">Invester Relation</a></li>
+                        <li><a href="" class="nav-link">Add Resturant</a></li>
+                      
+                            <li><a href="" class="nav-link">Log in</a></li>
+                           
+                                <li><a href="" class="nav-link">Sing up</a></li>
+                
+                </ul>
+                </div>
+               
+            </div><!--menu-end-->
+        </div><!--container-fluid-->
+        </nav>
+
+        <section>
+            <img src="https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png"class="w-100"style="height:500px;">
+            <center>
+            <img src="	https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png" class="h">
+            <p class="h1">Discover the best food & drinks in Gwalior</p>
+            <form style="color:#fff;"class="h2">
+                <div style="margin-bottom:16px;">
+                    <label>Username:</label>
+                    <input type="text" name="" class="form-control">
+                </div>
+                </form>
+        </center>
+        </section>
+
+
+        static userregister = async (req, res) => {
+            try {
+              const { name, email, password, confirmpassword } = req.body;
+              const user = await UserModel.findOne({ email: email });
+        
+              if (user) {
+                res.status(401).json({
+                  message: 'email already exists',
+                })
+              } else {
+                if (name && email && password && confirmpassword) {
+                  if (password == confirmpassword) {
+        
+                    const hashpassword = await bcrypt.hash(password, 10)
+                    const register = await new UserModel({
+                      name: name,
+                      email: email,
+                      password: hashpassword,
+        
+                    });
+        
+                    await register.save();
+                    res.status(201).json({
+                      message: 'registration sussesfully',
+                      register,
+                    })
+                  } else {
+                    res.status(401).json({
+                      message: 'password and confirmpassword does not match',
+                    })
+                  }
+                } else {
+                  res.status(401).json({
+                    message: 'all field are required',
+                  })
+                }
+              }
+            } catch (error) {
+              console.log(error);
+            }
+          }
+        
+        
+        
+          // static verifylogin = async (req, res) => {
+          //   try {
+          //     // console.log(req.body)
+          //     const { email, password } = req.body
+          //     if (email && password) {
+          //       const user = await UserModel.findOne({ email: email });
+          //       if (user != null) {
+          //         const ismatched = await bcrypt.compare(password, user.password);
+          //         if (ismatched) {
+          //           // generat jwt token
+          //           const token = jwt.sign({ id: user._id }, "ritikraghuwanshi123");
+          //           // console.log(token)
+          //           res.cookie("token", token);
+          //         res.status(201).json({
+          //           status: "success",
+          //           message: "login successfully with web token",
+          //           // token:token,
+          //           user,
+          //         });
+          //         } else {
+          //           res.status(401).json({
+          //             message: 'email or password is incorrect',
+          //           });
+          //         }
+        
+          //       } else {
+          //         res.status(401).json({
+          //           message: 'you are not a register user',
+          //         });
+          //       }
+          //     } else {
+          //       res.status(401).json({
+          //         message: 'All fields are required',
+          //       });
+          //     }
+          //   }
+          //   catch (error) {
+          //     res.send()
+          //   }
+          // }
+        
+          static verifylogin = async (req, res) => {
+            try {
+              // console.log(req.body)
+              const { email, password } = req.body
+              if (email && password) {
+                const user = await UserModel.findOne({ email: email })
+                if (user != null) {
+                  const ismatched = await bcrypt.compare(password, user.password);
+                  if (ismatched) {
+                    // generat jwt token
+                    const token = jwt.sign({ id: user._id }, "ritikraghuwanshi123");
+                    // console.log(token)
+                  //   res.cookie("token", token);
+                  // res.status(201).json({
+                  //   status: "success",
+                  //   message: "login successfully with web token",
+                    // token:token,
+                    res.cookie('token',token)
+                    res
+                    .status(201)
+                    .json({
+                      status:"success",
+                      message:"email or password not matched",
+                      user,
+                    });
+        
+                  }
+                  } else {
+                    res.status(401).json({
+                      message: 'you are not registered',
+                    });
+                  }
+        
+                } else {
+                  res.status(401).json({
+                    message: 'All Field are required',
+                  });
+                }
+            }
+            catch (error) {
+              res.send()
+            }
+          }
+          router.post('/register',UserController.userregister)
+          router.post('/login',UserController.verifylogin)        
+</body>
+</html>

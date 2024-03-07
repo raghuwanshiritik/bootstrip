@@ -1,0 +1,123 @@
+.navbar{
+    background: #00000082!important;
+}
+.navbar-nav li
+{
+  padding: 0 10px;
+}
+.navbar-nav li a
+{
+  color: #fff!important;
+  font-weight:600px;
+  font-size:20px;
+}
+.b{
+   text-align: center;
+}
+.weblogo{
+   width: 150px;
+}
+.moblogo{
+   display: none;
+}
+@media(max-width:768px){
+ .moblogo{
+   display:block;
+ }
+ .weblogo{
+   display:none;
+ }
+ .navbar{
+   background:#fcb21c!important;
+ }
+}
+
+
+.btn-green{
+display:inline-block;  
+text-transform: capitalize;
+font-size: 16px;
+font-weight:#fff;
+padding:10px 30px;
+border-radius: 2px;
+/* position:relative; */
+border: 1px solid #01ca8b;
+box-shadow:0 0 0 4em #01ca8b inset;
+transition:all 350ms ease;
+} 
+.btn-green i{
+margin-right:6px;
+}
+.btn-green:hover{
+box-shadow:0 0 0#01ca8b inset;
+background:#fff;
+color: #01ca8b;
+}
+.btn-transparent{
+border:1px solid #fff;
+} 
+
+.q1{
+    background-image: url(https://png.pngtree.com/background/20230519/original/pngtree-an-abstract-image-of-a-butterfly-with-colorful-paint-splats-on-picture-image_2668333.jpg);
+    display: flex;
+    height: auto;
+}
+.q2{
+  color: rgb(204, 183, 99);
+    font-family: Lobster;
+    margin-top: -398px;
+   display: flex;
+}
+.q3{
+    color: rgb(204, 183, 99);
+      font-family:cursive;
+      font-size: 58px;
+      margin-top: 50px;
+      display: flex;
+  }
+  .q4{
+   margin-top: -500px;
+  }
+  .q5{
+    margin-top: 100px;
+  }
+  .q6{
+    font-size: 28px;
+  }
+  .q7{
+    background-color:beige;
+  }
+  .q8{
+    margin-top: 200px;
+    font-size: 55px;
+  }
+  .q9{
+    margin-top: 20px;
+    font-size: 25px;
+  }
+  .q10{
+    margin-top: 100px;
+  }
+  .q11{
+    margin-top: 100px;
+  }
+  .q12{
+    font-size: 28px;
+    margin-top: 20px;
+  }
+
+
+  .a1{
+    display:block;
+  }
+  .a2{
+    display:none;
+  }
+  @media(max-width:768px){
+    .a2{
+      display:block;
+    }
+    .a1{
+      display:none;
+    }
+   }
